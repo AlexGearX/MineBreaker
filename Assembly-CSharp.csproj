@@ -63,6 +63,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Script\Ball.cs" />
+    <Compile Include="Assets\Script\Block.cs" />
+    <Compile Include="Assets\Script\GameStatus.cs" />
+    <Compile Include="Assets\Script\Level.cs" />
     <Compile Include="Assets\Script\LoseCollider.cs" />
     <Compile Include="Assets\Script\Paddle.cs" />
     <Compile Include="Assets\Script\SceneLoader.cs" />
