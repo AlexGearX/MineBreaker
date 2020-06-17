@@ -10,22 +10,22 @@ PrefabInstance:
     - target: {fileID: 1386846331353090464, guid: 022052ed9ba07294787a73533a420606,
         type: 3}
       propertyPath: m_Name
-      value: Dirt2 Block
+      value: Dirt2 Block Variant (2)
       objectReference: {fileID: 0}
     - target: {fileID: 1386846331353090470, guid: 022052ed9ba07294787a73533a420606,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.0794563
+      value: -1.484
       objectReference: {fileID: 0}
     - target: {fileID: 1386846331353090470, guid: 022052ed9ba07294787a73533a420606,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.9939542
+      value: 1.416
       objectReference: {fileID: 0}
     - target: {fileID: 1386846331353090470, guid: 022052ed9ba07294787a73533a420606,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.46875
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1386846331353090470, guid: 022052ed9ba07294787a73533a420606,
         type: 3}

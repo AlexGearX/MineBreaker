@@ -1082,8 +1082,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: MineBreaker
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9f99179096cffa048b63d859d09d8038, type: 2}
-  m_sharedMaterial: {fileID: -7399988498424201963, guid: 9f99179096cffa048b63d859d09d8038,
+  m_fontAsset: {fileID: 11400000, guid: 5f396d542d7013944afbf7a7e842f546, type: 2}
+  m_sharedMaterial: {fileID: -7399988498424201963, guid: 5f396d542d7013944afbf7a7e842f546,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}

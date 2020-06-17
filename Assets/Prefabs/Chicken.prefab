@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1887234311750040842}
   - component: {fileID: 1887234311750040843}
   m_Layer: 0
-  m_Name: Block
+  m_Name: Chicken
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -122,3 +122,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   breakSounds: {fileID: 8300000, guid: 4e5ff4202553bff4e869ffc8943fd8f0, type: 3}
+  blockSparklesVFX: {fileID: 100000, guid: 7d846c02296ef4dc4abff04ce3e5262c, type: 3}

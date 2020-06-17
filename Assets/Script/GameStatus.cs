@@ -13,6 +13,26 @@ public class GameStatus : MonoBehaviour
     // State Variables
     [SerializeField] int currentScore = 0;
 
+    public void resetScore()
+    {
+        currentScore = 0;
+        Destroy(gameObject);
+    }
+
+    private void Awake()
+    {
+        int gameStatusCount = FindObjectsOfType<GameStatus>().Length;
+        if (gameStatusCount > 1)
+        {
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,12 +43,13 @@ public class GameStatus : MonoBehaviour
     void Update()
     {
         Time.timeScale = gameSpeed;
-        countScore();
+        
     }
 
     public void addToScore()
     {
         currentScore += PointPerBlockDestroyed;
+        countScore();
     }
 
     private void countScore()
