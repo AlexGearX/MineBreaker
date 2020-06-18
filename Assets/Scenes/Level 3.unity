@@ -590,6 +590,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 697711680}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &724657749 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6684728564114477202, guid: 1d616abe38e88db48a6ee07c088ca7fd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1411728923}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &801660396
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2558,6 +2570,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8746751710042865889, guid: db173fa644a9fec43bea29687f143c66,
+        type: 3}
+      propertyPath: HealthText
+      value: 
+      objectReference: {fileID: 724657749}
     - target: {fileID: 8746751710413752346, guid: db173fa644a9fec43bea29687f143c66,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2617,6 +2634,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Place space
+      objectReference: {fileID: 0}
+    - target: {fileID: 8746751710413752347, guid: db173fa644a9fec43bea29687f143c66,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db173fa644a9fec43bea29687f143c66, type: 3}

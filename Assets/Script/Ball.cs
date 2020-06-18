@@ -11,6 +11,7 @@ public class Ball : MonoBehaviour
     [SerializeField] AudioClip[] ballSounds;
     [SerializeField] float randomFactor = 0.5f;
 
+
     //state
     Vector2 paddleToBallVector;
     bool hasStarted = false;
@@ -38,7 +39,7 @@ public class Ball : MonoBehaviour
         }
     }
 
-    private void LaunchOnMouseClick()
+    public void LaunchOnMouseClick()
     {
         if (Input.GetMouseButtonDown(0))
         {
@@ -52,8 +53,10 @@ public class Ball : MonoBehaviour
         myRigidBody2D.AddForce(transform.up * 1f,ForceMode2D.Impulse);
     }
 
-    private void LockBallToPaddle()
+    public void LockBallToPaddle()
     {
+        myRigidBody2D.velocity = Vector3.zero;
+        myRigidBody2D.angularVelocity = 0f;
         Vector2 paddlePos = new Vector2(paddle1.transform.position.x, paddle1.transform.position.y);
         transform.position = paddlePos + paddleToBallVector;
     }
@@ -71,6 +74,10 @@ public class Ball : MonoBehaviour
         } 
     }
 
+    public void backHasStared()
+    {
+        hasStarted = false;
+    }
 
 
 }
