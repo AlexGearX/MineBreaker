@@ -121,5 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 586ba58f0cd561f4fb6d9805487a0c57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  breakSounds: {fileID: 0}
-  blockSparklesVFX: {fileID: 0}
+  breakSounds: {fileID: 8300000, guid: 7220db3c1dc84d64ca82569be0e2d51a, type: 3}
+  blockSparklesVFX: {fileID: 100000, guid: 7d846c02296ef4dc4abff04ce3e5262c, type: 3}
+  hitSprites: []
+  timesHit: 0

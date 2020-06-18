@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Numerics;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.WSA;
 using Vector2 = UnityEngine.Vector2;
 
@@ -13,6 +9,7 @@ public class Ball : MonoBehaviour
     [SerializeField] float xPush = 2f;
     [SerializeField] float yPush = 15f;
     [SerializeField] AudioClip[] ballSounds;
+    [SerializeField] float randomFactor = 0.5f;
 
     //state
     Vector2 paddleToBallVector;
@@ -21,12 +18,14 @@ public class Ball : MonoBehaviour
     //Cached component references
 
     AudioSource myAudioSouce;
+    Rigidbody2D myRigidBody2D;
 
     // Start is called before the first frame update
     void Start()
     {
         paddleToBallVector = transform.position - paddle1.transform.position;
         myAudioSouce = GetComponent<AudioSource>();
+        myRigidBody2D = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -43,9 +42,14 @@ public class Ball : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(xPush, yPush);
+            myRigidBody2D.velocity = new Vector2(xPush, yPush);
             hasStarted = true;
         }
+    }
+
+    public void PushBallOnPad()
+    {
+        myRigidBody2D.AddForce(transform.up * 1f,ForceMode2D.Impulse);
     }
 
     private void LockBallToPaddle()
@@ -56,10 +60,17 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Vector2 velocityTweak = new Vector2
+            (Random.Range(-randomFactor, randomFactor),
+            Random.Range(-randomFactor, randomFactor));
         if (hasStarted)
         {
-            AudioClip clip = ballSounds[UnityEngine.Random.Range(0, ballSounds.Length)];
+            AudioClip clip = ballSounds[Random.Range(0, ballSounds.Length)];
             GetComponent<AudioSource>().PlayOneShot(clip);
+            myRigidBody2D.velocity += velocityTweak;
         } 
     }
+
+
+
 }

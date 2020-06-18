@@ -47,6 +47,7 @@ MonoBehaviour:
   gameSpeed: 1
   PointPerBlockDestroyed: 83
   scoreText: {fileID: 5908395675129645668}
+  isAutoPlayEnabled: 1
   currentScore: 0
 --- !u!1001 &5908395676059718805
 PrefabInstance:
@@ -73,7 +74,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 930143985, guid: 8712347d7b42e5446b5579d253d081e7, type: 3}
       propertyPath: m_margin.x
-      value: 22.01764
+      value: 17.559387
       objectReference: {fileID: 0}
     - target: {fileID: 5316823907923037857, guid: 8712347d7b42e5446b5579d253d081e7,
         type: 3}
